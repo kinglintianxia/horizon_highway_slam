@@ -60,6 +60,12 @@ target_link_libraries(horizon_highway_mapping
 		${CHOLMOD_LIBRARIES}
 		${BLAS_LIBRARIES}
 		${LAPACK_LIBRARIES}
-		)
+        )
+        
+# Odom subscriber for data save         
+add_executable (odom_sub_node src/odom_subscriber.cpp)
+target_link_libraries(odom_sub_node
+        ${catkin_LIBRARIES}
+        )
 
 
